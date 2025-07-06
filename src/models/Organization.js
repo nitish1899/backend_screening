@@ -131,9 +131,6 @@ const organizationSchema = new mongoose.Schema({
 });
 
 // Indexes for performance
-organizationSchema.index({ domain: 1 }, { unique: true });
-organizationSchema.index({ slug: 1 }, { unique: true });
-organizationSchema.index({ name: 1 });
 organizationSchema.index({ isActive: 1 });
 organizationSchema.index({ 'subscription.status': 1 });
 
